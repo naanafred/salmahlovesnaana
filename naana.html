@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>important question👀</title>
+
+    <style>
+        body {
+            color: purple;
+            text-align: center;
+            background-color: rgb(8, 0, 7);
+            padding-top: 100px;
+            font-family: Arial;
+        }
+
+        h1 {
+            color: rgb(255, 0, 153);
+            font-size: 3cm;
+        }
+
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.5cm;
+            cursor: pointer;
+            border: none;
+        }
+
+        #yesBtn {
+            background: purple;
+            color: white;
+        }
+
+        #noBtn {
+            background: purple;
+            color: white;
+        }
+
+        #message {
+            color: white;
+            font-size: 2cm;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>marry salmah?????????🌹</h1>
+
+    <button id="yesBtn">YES</button>
+    <button id="noBtn">NO</button>
+
+    <div id="message"></div>
+
+    <script>
+        let noCount = 0;
+
+        const messages = [
+            "chaii are you sureeee? 💔",
+            "like really really sure 😭",
+            "likee..100% sure 💔",
+            "our children will be nice 😭",
+            "okay i give up 😞",
+            "sikeeee 😂",
+            "okay okay fine this is the final chance 😭",
+            "okay enough 😤",
+            "sorry access denied press yes to continue 🚫",
+            "yesss 💖"
+        ];
+
+        document.getElementById("yesBtn").onclick = function () {
+            document.getElementById("message").innerHTML =
+                "yayy! we are finally marrieddddddd!!!!!!💖";
+        };
+
+        document.getElementById("noBtn").onclick = function () {
+            if (noCount < messages.length - 1) {
+                document.getElementById("message").innerHTML = messages[noCount];
+                noCount++;
+            } else {
+                document.getElementById("message").innerHTML = "yesss 💖";
+            }
+        };
+    </script>
+
+</body>
+</html>
